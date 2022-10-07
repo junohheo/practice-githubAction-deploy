@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 env:
-  S3_BUCKET_NAME: be-0-name
+  S3_BUCKET_NAME: be-118-junohheo
 
 jobs:
   build:
@@ -47,7 +47,7 @@ jobs:
       # CodeDeploy에게 배로 명령을 내립니다.
       - name: Code Deploy
         run: >
-          aws deploy create-deployment --application-name be-0-name
+          aws deploy create-deployment --application-name be-118-junohheo
           --deployment-config-name CodeDeployDefault.AllAtOnce
-          --deployment-group-name be-0-name-group
+          --deployment-group-name be-118-junohheo-group
           --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=practice-deploy.zip
